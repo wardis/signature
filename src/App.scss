@@ -19,17 +19,17 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #232526; /* fallback for old browsers */
+  background: #141e30; 
   background: -webkit-linear-gradient(
     to left,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    #243b55,
+    #141e30
+  );
   background: linear-gradient(
     to left,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    #243b55,
+    #141e30
+  );
 }
 
 ul {
@@ -50,5 +50,22 @@ ul {
 
 // Content
 .content {
-  height: 100vh;
+  margin: 50px;
+  flex: 1;
+
+  .preview {
+    color: black;
+    background: white;
+    border: 1px solid white;
+    padding: 40px;
+
+    .signature {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.sc-fBuWsC {
+  color: orange;
 }

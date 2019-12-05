@@ -1,9 +1,13 @@
 import React from 'react'
+import Signature from './Signature'
 
 const Preview = () => {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, voluptatum.</p>
+    <div className="preview">
+
+      <div className="preview__browser">
+        <Signature />
+      </div>
     </div>
   )
 }

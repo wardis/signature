@@ -3,7 +3,7 @@ import Preview from '../Preview';
 
 const Content = () => {
   return (
-    <div class="content">
+    <div className="content">
       <h1>Email signature</h1>
       <Preview />
     </div>
