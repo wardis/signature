@@ -1,11 +1,11 @@
 import React from 'react';
 import Preview from '../Preview';
 
-const Content = () => {
+const Content = (props) => {
   return (
-    <div className="content">
+    <div className='content'>
       <h1>Email signature</h1>
-      <Preview />
+      <Preview userDetails={props.userDetails} />
     </div>
   );
 };

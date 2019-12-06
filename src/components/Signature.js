@@ -1,19 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
-const Signature = () => {
-  const user = {
-    firstname: 'John',
-    lastname: 'Smith',
-    jobtitle: 'Marketer',
-    company: "WARDI'S",
-    phone: '111 222 3333',
-    website: 'www.wardi-s.com',
-    address: {
-      line1: '2 rue de la prospère',
-      line2: '75001, Paris, France'
-    }
-  };
+const Signature = (props) => {
+  const user = props.userDetails;
 
   const style = {
     fontSize: '14px'

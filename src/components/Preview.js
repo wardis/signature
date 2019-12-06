@@ -1,7 +1,8 @@
 import React from 'react'
 import Signature from './Signature'
 
-const Preview = () => {
+const Preview = (props) => {
+
   return (
     <div className="preview">
 
@@ -14,7 +15,7 @@ const Preview = () => {
             <p>Best regards,</p>
         </div>
         <div className="signature__wrapper">
-          <Signature />
+          <Signature userDetails={props.userDetails}/>
         </div>
       </div>
     </div>
