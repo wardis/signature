@@ -2,14 +2,26 @@
 import React from 'react';
 
 const Signature = () => {
+  const user = {
+    firstname: 'John',
+    lastname: 'Smith',
+    jobtitle: 'Marketer',
+    company: "WARDI'S",
+    phone: '111 222 3333',
+    website: 'www.wardi-s.com',
+    address: {
+      line1: '2 rue de la prospère',
+      line2: '75001, Paris, France'
+    }
+  };
+
   const style = {
     fontSize: '14px'
   };
   const linkStyle = {
-    textDecoration: "none",
-    color: "rgb(0, 0, 0)"
+    textDecoration: 'none',
+    color: 'rgb(0, 0, 0)'
   };
-  //  'text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;'
 
   return (
     <div className='signature'>
@@ -17,61 +29,90 @@ const Signature = () => {
         <tbody>
           <tr>
             <td>
-              <h3>
-                <span>John</span>
-                <span>&nbsp;</span>
-                <span>Smith</span>
-              </h3>
-              <p>Marketer</p>
-              <p>Wardi's</p>
+              {user.firstname || user.lastname ? (
+                <h3>
+                  <span>{user.firstname}</span>
+                  <span>&nbsp;</span>
+                  <span>{user.lastname}</span>
+                </h3>
+              ) : (
+                ''
+              )}
+
+              {user.jobtitle ? <p>{user.jobtitle}</p> : ''}
+              {user.company ? <p>{user.company}</p> : ''}
             </td>
             <td width='30'></td>
             <td width='1' style={{ borderLeft: '1px solid red' }}></td>
             <td width='30'></td>
             <td>
-              <p>
-                <span>
-                  <img
-                    width='13'
-                    src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png'
+              {user.phone ? (
+                <p>
+                  <span>
+                    <img
+                      width='13'
+                      src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png'
+                      style={{
+                        backgroundColor: 'rgb(242, 84, 125)',
+                        marginRight: '10px'
+                      }}
+                    />
+                  </span>
+                  <a href={'tel:' + user.phone} style={linkStyle}>
+                    <span>{user.phone}</span>
+                  </a>
+                </p>
+              ) : (
+                ''
+              )}
+
+              {user.website ? (
+                <p>
+                  <span>
+                    <img
+                      width='13'
+                      src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png'
+                      style={{
+                        backgroundColor: 'rgb(242, 84, 125)',
+                        marginRight: '10px'
+                      }}
+                    />
+                  </span>
+                  <a href={'//' + user.website} style={linkStyle}>
+                    <span>{user.website}</span>
+                  </a>
+                </p>
+              ) : (
+                ''
+              )}
+
+              {user.address.line1 || user.address.line2 ? (
+                <p>
+                  <span>
+                    <img
+                      width='13'
+                      src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png'
+                      style={{
+                        backgroundColor: 'rgb(242, 84, 125)',
+                        marginRight: '10px'
+                      }}
+                    />
+                  </span>
+                  <span>{user.address.line1}</span>
+                  <br />
+                  <span
                     style={{
-                      backgroundColor: 'rgb(242, 84, 125)',
-                      marginRight: '10px'
+                      marginLeft: '23px',
+                      marginTop: '.4em',
+                      display: 'block'
                     }}
-                  />
-                </span>
-                <a href='tel:' style={linkStyle}>
-                  <span>111 222 3333</span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  <img
-                    width='13'
-                    src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png'
-                    style={{
-                      backgroundColor: 'rgb(242, 84, 125)',
-                      marginRight: '10px'
-                    }}
-                  />
-                </span>
-                <a href='//www.wardi-s.com' style={linkStyle}>
-                  <span>www.wardi-s.com</span>
-                </a>
-              </p>
-              <p>
-                <span>
-                  <img
-                    width='13'
-                    src='https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png'
-                    style={{
-                      backgroundColor: 'rgb(242, 84, 125)',
-                      marginRight: '10px'
-                    }}
-                  />
-                </span>
-                <span>line 1, line 2, line 3, line 4</span>
-              </p>
+                  >
+                    {user.address.line2}
+                  </span>
+                </p>
+              ) : (
+                ''
+              )}
             </td>
           </tr>
         </tbody>
