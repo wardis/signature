@@ -75,7 +75,7 @@ const Signature = (props) => {
                 ''
               )}
 
-              {user.address.line1 || user.address.line2 ? (
+              {user.address1 || user.address2 ? (
                 <p>
                   <span>
                     <img
@@ -87,7 +87,7 @@ const Signature = (props) => {
                       }}
                     />
                   </span>
-                  <span>{user.address.line1}</span>
+                  <span>{user.address1}</span>
                   <br />
                   <span
                     style={{
@@ -96,7 +96,7 @@ const Signature = (props) => {
                       display: 'block'
                     }}
                   >
-                    {user.address.line2}
+                    {user.address2}
                   </span>
                 </p>
               ) : (

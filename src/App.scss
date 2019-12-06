@@ -41,6 +41,18 @@ ul {
   margin: 40px;
 }
 
+// Detail Form
+.details {
+  &__form {
+    span {
+      margin-top: 10px;
+      display: block;
+    }
+
+  }
+
+}
+
 // Content
 .content {
   margin: 50px;
