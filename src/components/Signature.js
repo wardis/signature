@@ -2,7 +2,9 @@
 import React from 'react';
 
 const Signature = () => {
-  const style = {};
+  const style = {
+    fontSize: '14px'
+  };
   const linkStyle = {
     textDecoration: "none",
     color: "rgb(0, 0, 0)"

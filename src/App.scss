@@ -19,17 +19,9 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #141e30; 
-  background: -webkit-linear-gradient(
-    to left,
-    #243b55,
-    #141e30
-  );
-  background: linear-gradient(
-    to left,
-    #243b55,
-    #141e30
-  );
+  background: #141e30;
+  background: -webkit-linear-gradient(to left, #243b55, #141e30);
+  background: linear-gradient(to left, #243b55, #141e30);
 }
 
 ul {
@@ -59,8 +51,16 @@ ul {
     border: 1px solid white;
     padding: 40px;
 
-    .signature {
-      display: flex;
+    &__text {
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: normal;
+    }
+
+    .signature__wrapper {
+      // display: flex;
+      max-width: 500px;
+      margin: 0 auto;
       justify-content: center;
     }
   }
